@@ -30,5 +30,13 @@ build-python: $(RGB_LIBRARY)
 install-python: build-python
 	$(MAKE) -C $(PYTHON_LIB_DIR) install
 
+install:
+	@./mk/install.sh
+	@echo 'Installation complete!'
+
+uninstall:
+	@./mk/uninstall.sh
+	@echo 'Uninstallation complete!'
+
 FORCE:
 .PHONY: FORCE
